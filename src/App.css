@@ -1,24 +1,13 @@
 .App {
-  text-align: center;
+  font-family: 'Cinzel Decorative', cursive;
+  background: whitesmoke;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cinzel Decorative', cursive;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+aside {
+  padding: 30px;
+  background-color: rgba(207,181,59,.1);
 }
