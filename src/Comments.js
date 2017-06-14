@@ -24,6 +24,7 @@ class Comments extends Component {
       text: this.state.comment
     }
     state.comments.push(comment)
+    state.comment = ''
     this.setState(state)
   }
 
@@ -33,8 +34,18 @@ class Comments extends Component {
         <textarea value={this.state.comment} onChange={this.updateComment} placeholder='Place Comment Here'>
         </textarea>
         <button className="button">Submit Comment</button>
+        {this.state.comments.map((comment, i) => <Comment key={i} comment={comment} />)}
       </div>
     )
   }
+}
+function Comment (props) {
+  return (
+    <div className="comment">
+      <div>
+        {props.comment.text}
+      </div>
+    </div>
+  )
 }
 export default Comments
