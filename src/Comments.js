@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Comments.css'
 
 class Comments extends Component {
   constructor(props) {
@@ -33,13 +34,14 @@ class Comments extends Component {
       <div className="comments">
         <textarea value={this.state.comment} onChange={this.updateComment} placeholder='Place Comment Here'>
         </textarea>
-        <button className="button">Submit Comment</button>
+        <button onClick={this.addComment} className="button">Submit Comment</button>
         {this.state.comments.map((comment, i) => <Comment key={i} comment={comment} />)}
       </div>
     )
   }
 }
 function Comment (props) {
+  console.log('test')
   return (
     <div className="comment">
       <div>
